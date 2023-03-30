@@ -1,0 +1,19 @@
+.fitCover{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.headSpace{
+    text-align: end;
+}
+.fitCoverSingle{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: auto;
+}
+.btnModal{
+    background: white;
+    border: none;
+}

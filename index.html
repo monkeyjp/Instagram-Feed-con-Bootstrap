@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/aa33cfcadb.js" crossorigin="anonymous"></script>
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-light p-2"> <!--HEADER-->
+            <div class="col-9" style="font-size: 25px;"><!--Icon and Tittle-->
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </div>
+            <div class="col-3 d-flex justify-content-end"><!--HEADER BUTTONS-->
+                <button type="button" class="btn btn-success mr-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> <!--MODAL-->
+                    Create a new post
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create a new Post</h5>
+                        <button type="button" class="btn-close btnModal" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Caption:
+                        <div class="input-group mb-1">
+                          <textarea class="form-control" aria-label="With textarea" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">
+                          <i class="fa-sharp fa-solid fa-camera"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark">
+                          <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--MODAL END-->
+                <div class="dropdown"> <!--DROPDOWN-->
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                  </ul>
+                </div> <!--DROPDOWN END-->
+            </div><!--HEADER BUTTONS END-->
+        </div><!--HEADER END-->
+        <!--------------------  NAV PANEL  ------------------>  
+          <ul class="nav nav-pills mb-3 mt-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-light active" style="background-color: #ffffff;" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                <i class="fa-solid fa-table-cells"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-light" style="background-color: #ffffff;" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                <i class="fa-solid fa-square"></i>
+              </button>
+            </li>
+          </ul>
+        <!-------------------- END NAV PANEL  ------------------>  
+          <div class="tab-content" id="pills-tabContent"> 
+            <div class="tab-pane fade show active justify-content-center" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"> <!-- If the user choose 3xRows view -->
+              <div class="row">
+                <div class="card-group">
+                  <div class="card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://assets.weforum.org/article/image/XaHpf_z51huQS_JPHs-jkPhBp0dLlxFJwt-sPLpGJB0.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://www.beaches.com/blog/content/images/2022/01/Beaches-Turks-and-Caicos-family-enjoying.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://assets.weforum.org/article/image/XaHpf_z51huQS_JPHs-jkPhBp0dLlxFJwt-sPLpGJB0.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://www.beaches.com/blog/content/images/2022/01/Beaches-Turks-and-Caicos-family-enjoying.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://assets.weforum.org/article/image/XaHpf_z51huQS_JPHs-jkPhBp0dLlxFJwt-sPLpGJB0.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                  <div class="card">
+                    <img src="https://www.beaches.com/blog/content/images/2022/01/Beaches-Turks-and-Caicos-family-enjoying.jpg" class="card-img-top fitCover" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"> <!-- If the user choose 1 column view -->
+              <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                  <div class="col-6">My Dog</div>
+                  <div class="col-6 headSpace">26/02</div>
+                </div>
+                <div class="card-body p-0">
+                  <img src="https://www.beaches.com/blog/content/images/2022/01/Beaches-Turks-and-Caicos-family-enjoying.jpg" class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                  <h5 class="card-title">406 Likes</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+                </div>
+              </div>
+              <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                  <div class="col-6">My Dog</div>
+                  <div class="col-6 headSpace">26/02</div>
+                </div>
+                <div class="card-body p-0">
+                  <img src="https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*" class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                  <h5 class="card-title">406 Likes</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+                </div>
+              </div>
+              <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                  <div class="col-6">My Dog</div>
+                  <div class="col-6 headSpace">26/02</div>
+                </div>
+                <div class="card-body p-0">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG" class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                  <h5 class="card-title">406 Likes</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+</body>
+</html>
